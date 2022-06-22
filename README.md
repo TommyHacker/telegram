@@ -36,8 +36,11 @@
 
 - <strong><i>terminate the docker containers by replacing startDev.sh with teardown.sh in step 3</i></strong>
 
+# Client/Front end 
 
-#API Endpoints
+http://localhost:8080
+
+# API Endpoints
 
 http://localhost:3000
 
