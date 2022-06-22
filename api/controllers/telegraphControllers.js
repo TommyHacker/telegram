@@ -1,6 +1,8 @@
-exports.getAll = (req, res) => {
+const Telegraph = require("../models/Telegraph");
+
+exports.getAll = async (req, res) => {
   try {
-    const telegraphs = "all telegraphs";
+    const telegraphs = await Telegraph.all;
     res
       .status(200)
       .json({ success: true, message: "got all telegraphs", data: telegraphs });
@@ -9,10 +11,10 @@ exports.getAll = (req, res) => {
   }
 };
 
-exports.getOne = (req, res) => {
+exports.getOne = async (req, res) => {
   try {
     const { id } = req.params;
-    const telegraph = "one telegraph";
+    const telegraph = await Telegraph.findById(id);
     res
       .status(200)
       .json({ success: true, message: "got one telegraph", data: telegraph });
@@ -21,9 +23,16 @@ exports.getOne = (req, res) => {
   }
 };
 
-exports.create = (req, res) => {
+exports.create = async (req, res) => {
   try {
-    const { title, pseudonym, body } = req.body;
+    const telegraph = await Telegraph.create(req.body);
+    res
+      .status(201)
+      .json({
+        success: true,
+        message: "created telegraph successfully.",
+        data: telegraph,
+      });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }

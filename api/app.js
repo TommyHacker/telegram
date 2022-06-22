@@ -9,6 +9,6 @@ app.use(cors());
 
 app.get("/", (req, res) => res.send("root Route"));
 
-app.use("/telegraph", telegraphRoutes);
+app.use("/telegraphs", telegraphRoutes);
 
 module.exports = app;
