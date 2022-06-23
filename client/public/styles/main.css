@@ -27,13 +27,48 @@
     overflow-y: visible;
 }
 
+.form-left{
+width: 50vw;
+    min-height: 300px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    overflow-y: visible;
+    z-index: 99;
+
+}
+.form-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+    border-radius: 4px;
+    margin: 2rem;
+}
+#submit-btn{
+    background: white;
+    box-shadow: 0px 0px 2px grey;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.2s;
+    font-size: 18pt;
+}
+
+#submit-btn:hover{
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.705);
+    color: white;
+}
+
 #post-form {
     width: 50vw;
     min-height: 300px;
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
-    flex-direction: column;
+    flex-direction: row;
     overflow-y: visible;
     z-index: 99;
 }

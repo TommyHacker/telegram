@@ -24,15 +24,14 @@ exports.getOne = async (req, res) => {
 };
 
 exports.create = async (req, res) => {
+  console.log(req.body);
   try {
     const telegraph = await Telegraph.create(req.body);
-    res
-      .status(201)
-      .json({
-        success: true,
-        message: "created telegraph successfully.",
-        data: telegraph,
-      });
+    res.status(201).json({
+      success: true,
+      message: "created telegraph successfully.",
+      data: telegraph,
+    });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }
