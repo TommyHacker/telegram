@@ -1,16 +1,16 @@
 services:
-  # client:
-  #   container_name: dev_telegraph_client
-  #   build: ./client
-  #   image: telegraph_client
-  #   ports:
-  #     - 8080:8080
-  #   working_dir: /code
-  #   volumes:
-  #     - type: bind
-  #       source: ./client
-  #       target: /code
-  #   command: [ "http-server" ]
+  client:
+    container_name: dev_telegraph_client
+    build: ./client
+    image: telegraph_client
+    ports:
+      - 8080:8080
+    working_dir: /code
+    volumes:
+      - type: bind
+        source: ./client
+        target: /code
+    command: ["http-server"]
   api:
     container_name: telegraph_dev_api
     ports:
