@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/styles/main.css">
+    <script defer src="./public/scripts/index.js"></script>
     <title>Telegraph Clone</title>
 </head>
 <body>
-    <h1 id="title">Telegraph</h1>
+    <div class="form-container">
+        <form id="post-form">
+            <section class="input-section title-section">
+                <label id="title-label" for="title">Title</label>
+                <input id="title-input" type="text" name="title" placeholder="Title" autocomplete="off" required>
+            </section>
+
+            <section class="input-section pseudonym-section" >
+                <label id="pseudonym-label" for="pseudonym">Author</label>
+                <input id="pseudonym-input" type="text" name="pseudonym" placeholder="Your name" autocomplete="off" required>
+            </section>
+
+            <section class="input-section body-section" id="body-section">
+                <label id="pseudonym-label" for="pseudonym"></label>
+                <input id="body-input" type="text" name="body" placeholder="Your story..." autocomplete="off" required></input>
+            </section>
+
+        </form>
+    </div>
     
 </body>
 </html>
