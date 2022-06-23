@@ -1,4 +1,4 @@
-/* @import "./forms.css"; */
+@import "./forms.css";
 
 * {
     margin: 0;
@@ -15,115 +15,50 @@
     text-align: center;
 }
 
-
-/* form import */
-
-.form-container {
-    height: 50vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow-y: visible;
-}
-
-.form-left{
-width: 50vw;
-    min-height: 300px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    flex-direction: column;
-    overflow-y: visible;
-    z-index: 99;
-
-}
-.form-right{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 20%;
+.navigation-btn{
+    border: solid black 1px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
     border-radius: 4px;
-    margin: 2rem;
-}
-#submit-btn{
-    background: white;
-    box-shadow: 0px 0px 2px grey;
-    cursor: pointer;
-    padding: 10px;
-    transition: 0.2s;
-    font-size: 18pt;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-#submit-btn:hover{
-    text-decoration: none;
-    background: rgba(0, 0, 0, 0.705);
-    color: white;
-}
-
-#post-form {
-    width: 50vw;
-    min-height: 300px;
+.telegraphs-container{
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
-    flex-direction: row;
-    overflow-y: visible;
-    z-index: 99;
+    height: auto;
+    border: solid black 1px;
 }
-
-.input-section{
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+.card{
+    width: 90%;
+    margin: 4rem auto;
+    box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.5);
+    padding: 2rem;
+    border-radius: 3px;
 }
-
-.body-section{
-    justify-content: flex-end;
-}
-
-label{
-    color: rgba(0, 0, 0, 0.521);
-    width: 200px;
-    margin-right: 2rem;
-    border-right: 1px rgba(0, 0, 0, 0.274) solid;
-}
-
-
-#title-label{
-    font-size: 30pt;
-}
-
-#pseudonym-label{
-    font-size: 30pt;
-}
-
-
-input{
-padding: 5px 0 5px 10px;
-border-radius: 4px;
-font-size: 18pt;
-border: none;
-outline: none;
-transition: 0.2s;
-color: rgba(0, 0, 0, 0.753);
-width: 100%;
-}
-
-input:hover{
+.card-title::before{
+    content: "Title: ";
+    color: rgba(0, 0, 0, 0.342);}
+.card-title{
     text-decoration: underline;
-}
-input:focus{
-    text-decoration: none;
-}
-input::first-letter{
     text-transform: capitalize;
+    margin: 10px auto;
 }
+.card-name{
+    text-transform: capitalize;
+    margin: 10px;
 
-#body-input{
-    padding: 15px;
-    max-width: 100%;
-    z-index: 100;
+}
+.card-name::before{
+    content: "Pseudonym: ";
+    color: rgba(0, 0, 0, 0.342);
+}
+.card-body{
+    margin: 20px auto;
 }
