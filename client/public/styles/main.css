@@ -1,4 +1,5 @@
 @import "./forms.css";
+@import "./cards.css";
 
 * {
     margin: 0;
@@ -27,38 +28,3 @@
     transform: translateX(-50%);
 }
 
-.telegraphs-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: auto;
-    border: solid black 1px;
-}
-.card{
-    width: 90%;
-    margin: 4rem auto;
-    box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.5);
-    padding: 2rem;
-    border-radius: 3px;
-}
-.card-title::before{
-    content: "Title: ";
-    color: rgba(0, 0, 0, 0.342);}
-.card-title{
-    text-decoration: underline;
-    text-transform: capitalize;
-    margin: 10px auto;
-}
-.card-name{
-    text-transform: capitalize;
-    margin: 10px;
-
-}
-.card-name::before{
-    content: "Pseudonym: ";
-    color: rgba(0, 0, 0, 0.342);
-}
-.card-body{
-    margin: 20px auto;
-}
